@@ -20,6 +20,7 @@ urlpatterns = [
     path("userdashbord", views.userdashbord, name='userdashbord'),
     path("export_csv", views.export_csv, name='export_csv'),
     path("searchuser", views.searchuser, name='searchuser'),
+    path("searchnotification", views.searchnotification, name='searchnotification'),
     path("multi_delete_notification",
          views.multi_delete_notification, name='multi_delete_notification'),
     path("all_delete_notification",

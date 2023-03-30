@@ -285,6 +285,10 @@ def searchuser(request):
     return render(request, 'searchuser.html', {"queryuser": queryuser})
     # return HttpResponse('search is working')
 
+def searchnotification(request):
+    query = request.POST['queryresult']
+    queryresult = Notification.objects.filter(title__icontains=query)
+    return render(request, 'searchnotification.html', {"queryresult": queryresult})
 
 def export_csv(request):
     if 'androidid' and 'phone' in request.session:
